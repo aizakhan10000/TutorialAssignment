@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 function Homepage() {
 
@@ -14,3 +14,4 @@ function Homepage() {
 }
 
 export default Homepage;
+*/
