@@ -1,25 +1,35 @@
 import logo from './logo.svg';
+import {Route, Routes, Navigate, BrowserRouter} from "react-router-dom";
 import './App.css';
+import { Button } from 'react-bootstrap';
+import { TestButton } from './Components/Buttons';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { MUIButton } from './Components/Buttons/mui-Buttons';
+import Homepage from './pages/homepage';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" exact element={<Homepage />} />
+    </Routes>
+    </BrowserRouter>
+
+   /* <div className="App">
+    React App Demo
+
+    <Button>Test Button</Button>
+
+    <TestButton buttonname={"login"}/>
+    <TestButton buttonname={"sign up"}/>
+    <MUIButton></MUIButton>
     </div>
+    
   );
-}
+  */
+  )
+  };
 
 export default App;
